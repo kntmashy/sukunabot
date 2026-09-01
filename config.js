@@ -21,7 +21,7 @@ global.pairing   = e('PAIRING_NUMBER', '').replace(/\D/g, '')
 global.sessionId = e('SESSION_ID', '')
 
 // ━━━ المطورون ━━━
-global.owners = e('OWNER_NUMBERS', e('OWNER_NUMBER', '201036547166,201016855501,201150572826'))
+global.owners = e('OWNER_NUMBERS', e('OWNER_NUMBER', '201036547166,201016855501'))
   .split(',')
   .map(n => n.trim().replace(/\D/g, ''))
   .filter(Boolean)
