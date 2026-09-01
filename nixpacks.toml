@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["nodejs_20", "yt-dlp", "ffmpeg", "imagemagick", "chromium", "nss", "nspr", "atk", "at-spi2-atk", "xorg.libX11", "xorg.libXcomposite", "xorg.libXdamage", "xorg.libXrandr", "libdrm", "mesa", "expat", "libxkbcommon"]
+
+[phases.install]
+cmds = ["npm install --legacy-peer-deps"]
+
+[start]
+cmd = "pip install -U yt-dlp 2>/dev/null || curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp && chmod a+rx /usr/local/bin/yt-dlp ; node sukuna.js"

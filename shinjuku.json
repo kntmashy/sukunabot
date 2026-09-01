@@ -1,0 +1,122 @@
+{
+  "201016855501@s.whatsapp.net": {
+    "phase": "battle",
+    "round": 0,
+    "gojoHP": 100,
+    "sukunaHP": 100,
+    "tojiHP": 80,
+    "mahoragaHP": 120,
+    "yutaHP": 100,
+    "megumiHP": 90,
+    "nanamiHP": 95,
+    "itadoriHP": 100,
+    "currentTurn": "gojo",
+    "alive": {
+      "gojo": true,
+      "sukuna": true,
+      "toji": false,
+      "mahoraga": false,
+      "yuta": false,
+      "megumi": false,
+      "nanami": false,
+      "itadori": false
+    },
+    "logs": []
+  },
+  "201066036607@s.whatsapp.net": {
+    "phase": "battle",
+    "round": 0,
+    "gojoHP": 100,
+    "sukunaHP": 100,
+    "tojiHP": 80,
+    "mahoragaHP": 120,
+    "yutaHP": 100,
+    "megumiHP": 90,
+    "nanamiHP": 95,
+    "itadoriHP": 100,
+    "currentTurn": "gojo",
+    "alive": {
+      "gojo": true,
+      "sukuna": true,
+      "toji": false,
+      "mahoraga": false,
+      "yuta": false,
+      "megumi": false,
+      "nanami": false,
+      "itadori": false
+    },
+    "logs": []
+  },
+  "201096987442@s.whatsapp.net": {
+    "phase": "battle",
+    "round": 0,
+    "gojoHP": 100,
+    "sukunaHP": 100,
+    "tojiHP": 80,
+    "mahoragaHP": 120,
+    "yutaHP": 100,
+    "megumiHP": 90,
+    "nanamiHP": 95,
+    "itadoriHP": 100,
+    "currentTurn": "gojo",
+    "alive": {
+      "gojo": true,
+      "sukuna": true,
+      "toji": false,
+      "mahoraga": false,
+      "yuta": false,
+      "megumi": false,
+      "nanami": false,
+      "itadori": false
+    },
+    "logs": []
+  },
+  "201007901673@s.whatsapp.net": {
+    "phase": "battle",
+    "round": 0,
+    "gojoHP": 100,
+    "sukunaHP": 100,
+    "tojiHP": 80,
+    "mahoragaHP": 120,
+    "yutaHP": 100,
+    "megumiHP": 90,
+    "nanamiHP": 95,
+    "itadoriHP": 100,
+    "currentTurn": "gojo",
+    "alive": {
+      "gojo": true,
+      "sukuna": true,
+      "toji": false,
+      "mahoraga": false,
+      "yuta": false,
+      "megumi": false,
+      "nanami": false,
+      "itadori": false
+    },
+    "logs": []
+  },
+  "201016140501@s.whatsapp.net": {
+    "phase": "battle",
+    "round": 0,
+    "gojoHP": 100,
+    "sukunaHP": 100,
+    "tojiHP": 80,
+    "mahoragaHP": 120,
+    "yutaHP": 100,
+    "megumiHP": 90,
+    "nanamiHP": 95,
+    "itadoriHP": 100,
+    "currentTurn": "gojo",
+    "alive": {
+      "gojo": true,
+      "sukuna": true,
+      "toji": false,
+      "mahoraga": false,
+      "yuta": false,
+      "megumi": false,
+      "nanami": false,
+      "itadori": false
+    },
+    "logs": []
+  }
+}

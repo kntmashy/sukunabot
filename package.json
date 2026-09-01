@@ -1,0 +1,137 @@
+{
+  "name": "sukuna-bot-MD",
+  "version": "1.8.2",
+  "description": "WhatsApp Bot Multi Device",
+  "main": "sukuna.js",
+  "type": "module",
+  "directories": {
+    "lib": "lib",
+    "plugins": "plugins"
+  },
+  "scripts": {
+    "start": "node sukuna.js"
+  },
+  "dependencies": {
+    "sharp": "^0.34.5",
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "@bochilteam/scraper": "^4.2.4",
+    "@bochilteam/scraper-facebook": "^5.0.0",
+    "@brandond/findthelyrics": "^2.0.5",
+    "@distube/ytdl-core": "^4.16.0",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@green-code/music-track-data": "^2.0.3",
+    "@hapi/boom": "^10.0.1",
+    "primesave-dl": "^1.0.2",
+    "@hiudyy/ytdl": "^0.2.2",
+    "@shineiichijo/marika": "^3.0.1",
+    "@vitalets/google-translate-api": "^9.2.1",
+    "@xct007/frieren-scraper": "^0.0.2",
+    "acrcloud": "^1.4.0",
+    "@nirewen/apkcombo-downloader": "^1.0.0",
+    "api-dylux": "^1.6.2",
+    "archiver": "^7.0.1",
+    "audit": "^0.0.6",
+    "awesome-phonenumber": "^3.4.0",
+    "axios": "^1.13.1",
+    "axios-cookiejar-support": "^5.0.5",
+    "better-sqlite3": "^12.4.1",
+    "body-parser": "^1.20.2",
+    "cfonts": "^3.3.0",
+    "chalk": "^5.1.0",
+    "telegram": "^2.26.0",
+    "cheerio": "npm:cheerio@1.0.0-rc.12",
+    "colors": "1.4.0",
+    "debug": "^4.4.3",
+    "express": "^4.21.2",
+    "fast-levenshtein": "^3.0.0",
+    "fb-downloader-scrapper": "^3.0.1",
+    "file-type": "^18.0.0",
+    "fix": "^0.0.6",
+    "fluent-ffmpeg": "^2.1.3",
+    "form-data": "^4.0.0",
+    "formdata-node": "^5.0.0",
+    "fs-extra": "^11.3.2",
+    "fuse.js": "^7.1.0",
+    "glop": "^0.3.1",
+    "google-it": "^1.6.3",
+    "google-libphonenumber": "3.2.38",
+    "googleapis": "^126.0.1",
+    "got": "^13.0.0",
+    "hispamemes": "^1.0.7",
+    "human-readable": "^0.2.1",
+    "imagemaker.js": "^2.0.4",
+    "instagram-url-direct": "^1.0.13",
+    "jimp": "^0.16.13",
+    "jsbarcode": "^3.11.5",
+    "jsdom": "^19.0.0",
+    "link-preview-js": "^3.0.0",
+    "lodash": "^4.17.21",
+    "lowdb": "^3.0.0",
+    "md5": "^2.3.0",
+    "megajs": "^1.1.3",
+    "meta-scraper": "^2.1.3",
+    "mongoose": "^6.3.3",
+    "node-cache": "^5.1.2",
+    "node-fetch": "^3.2.10",
+    "node-gtts": "^2.0.2",
+    "node-id3": "^0.2.6",
+    "node-webpmux": "^3.1.3",
+    "openai": "^5.20.1",
+    "p-limit": "^7.1.1",
+    "pdfkit": "^0.13.0",
+    "perf_hooks": "^0.0.1",
+    "pino": "^10.1.0",
+    "pino-pretty": "^7.5.1",
+    "pretty-bytes": "^7.1.0",
+    "puppeteer": "^24.27.0",
+    "qrcode": "^1.5.1",
+    "qrcode-terminal": "^0.12.0",
+    "qs": "^6.11.2",
+    "readline": "^1.3.0",
+    "similarity": "^1.2.1",
+    "socket.io": "^4.4.1",
+    "soundcloud-downloader": "^1.0.0",
+    "soundcloud-scraper": "^4.0.6",
+    "spotifydl-x": "^0.3.5",
+    "string-similarity": "^4.0.4",
+    "syntax-error": "^1.4.0",
+    "terminal-image": "^2.0.0",
+    "url-regex-safe": "^3.0.0",
+    "uuid": "^13.0.0",
+    "ws": "^8.18.3",
+    "xmldom": "^0.6.0",
+    "yargs": "^17.3.1",
+    "yt-search": "^2.13.1",
+    "ytdl-core": "^4.11.5",
+    "angularsockets": "github:gojo-sensei-st/the-honored-one",
+    "libsignal": "^2.0.1",
+    "character.ai-ts": "latest"
+  },
+  "optionalDependencies": {
+    "moment-timezone": "^0.5.37",
+    "wa-sticker-formatter": "^4.3.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "eslint-config-google": "^0.14.0"
+  },
+  "overrides": {
+    "cheerio": {
+      "exports": {
+        ".": {
+          "import": "./lib/index.js",
+          "default": "./lib/index.js"
+        }
+      }
+    },
+    "angularsockets": {
+      "libsignal": "^2.0.1"
+    },
+    "@whiskeysockets/baileys": {
+      "libsignal": "^2.0.1"
+    }
+  }
+}
