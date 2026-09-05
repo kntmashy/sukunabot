@@ -352,6 +352,19 @@ export async function handler(conn, rawMsg) {
 
   if (!m || !m.sender || !m.chat) return
 
+  // ✅ منع استغلال اليوزرنيم المزيف
+  // لو fromMe=true بس المرسل مش البوت نفسه → تجاهل
+  {
+    const botNum    = numOf(conn.user?.jid || '')
+    const senderNum = numOf(m.sender)
+    const isRealFromMe = isFromMe && (
+      senderNum === botNum ||
+      m.sender === conn.user?.jid ||
+      rawMsg.key?.participant // رسايل الجروب اللي البوت بعتها
+    )
+    if (isFromMe && !isRealFromMe) return
+  }
+
   m.exp = 0
 
   if (global.db?.data == null && typeof global.loadDatabase === 'function') {
@@ -405,7 +418,8 @@ title: '', lastclaim: 0, lastweekly: 0
   const ownersJid = owners.map(n => String(n).replace(/\D/g, '') + '@s.whatsapp.net')
   const premsJid  = prems.map(n  => String(n).replace(/\D/g, '') + '@s.whatsapp.net')
 
-  const isROwner = ownersJid.includes(m.sender) || (isFromMe && ownersJid.some(o => o.split('@')[0] === conn.user?.jid?.split('@')[0]?.split(':')[0]))
+  const botJid   = conn.user?.jid?.split(':')[0] + '@s.whatsapp.net'
+  const isROwner = ownersJid.includes(m.sender) || isOwnerJid(m.sender) || (isFromMe && (m.sender === botJid || m.sender === conn.user?.jid))
   const isOwner  = isROwner
   const isPrems  = isROwner || premsJid.includes(m.sender) || user.premium === true
 
