@@ -1,11 +1,10 @@
-// plugins/احفظ.js
-const fs = require('fs');
-const axios = require('axios');
-require('dotenv').config();
+import fs from 'fs';
+import axios from 'axios';
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const GITHUB_REPO = process.env.GITHUB_REPO || 'kntmashy/Sukunabot';
+const GITHUB_TOKEN  = process.env.GITHUB_TOKEN;
+const GITHUB_REPO   = process.env.GITHUB_REPO || 'kntmashy/Sukunabot';
 const GITHUB_BRANCH = 'main';
+
 const getFileSha = async (filePath) => {
   try {
     const res = await axios.get(
@@ -57,7 +56,7 @@ const handler = async (m, { text, usedPrefix, command }) => {
   const q = m.quoted || m;
   const mime = q.mimetype || '';
   const isTextMessage = q.text;
-  const path = `plugins/${text}.js`;
+  const filePath = `plugins/${text}.js`;
   let fileContent = '';
 
   switch (command) {
@@ -74,20 +73,20 @@ const handler = async (m, { text, usedPrefix, command }) => {
         } else {
           throw `〘 ❗ 〙 الملف المرفق غير مدعوم.`;
         }
-        fs.writeFileSync(path, fileContent, 'utf8');
-        await saveToGithub(path, fileContent);
-        m.reply(`〘 ✅ 〙 تم حفظ الملف محلياً ورفعه على GitHub: "${path}"`);
+        fs.writeFileSync(filePath, fileContent, 'utf8');
+        await saveToGithub(filePath, fileContent);
+        m.reply(`〘 ✅ 〙 تم حفظ الملف محلياً ورفعه على GitHub: "${filePath}"`);
       } catch (error) {
         throw `〘 ❗ 〙 حدث خطأ: ${error.message || error}`;
       }
       break;
 
     case 'امسح':
-      if (!fs.existsSync(path)) throw `〘 ❗ 〙 الملف "${path}" غير موجود لحذفه`;
+      if (!fs.existsSync(filePath)) throw `〘 ❗ 〙 الملف "${filePath}" غير موجود لحذفه`;
       try {
-        fs.unlinkSync(path);
-        await deleteFromGithub(path);
-        m.reply(`〘 ✅ 〙 تم حذف الملف محلياً ومن GitHub: "${path}"`);
+        fs.unlinkSync(filePath);
+        await deleteFromGithub(filePath);
+        m.reply(`〘 ✅ 〙 تم حذف الملف محلياً ومن GitHub: "${filePath}"`);
       } catch (error) {
         throw `〘 ❗ 〙 حدث خطأ أثناء الحذف: ${error.message || error}`;
       }
@@ -103,4 +102,5 @@ handler.tags = ['owner'];
 handler.command = ['احفظ', 'امسح'];
 handler.owner = true;
 
-module.exports = handler;
+export default handler;
+      
