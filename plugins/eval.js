@@ -3,8 +3,7 @@
  * تنفيذ كود أو تحميل ملف من رابط
  */
 
-const handler = async (m, { conn, isROwner, text, command }) => {
-  if (!isROwner) return
+const handler = async (m, { conn, text, command }) => {
 
   // أمر .حمل رابط — يحمل ملف من URL ويحفظه في plugins
   if (command === 'حمل') {
@@ -45,8 +44,7 @@ const handler = async (m, { conn, isROwner, text, command }) => {
 }
 
 handler.help    = ['eval <كود>', 'حمل <رابط> <اسم>']
-handler.tags    = ['owner']
+handler.tags    = ['tools']
 handler.command = /^(eval|=>|حمل)$/i
-handler.owner   = false
 
 export default handler
