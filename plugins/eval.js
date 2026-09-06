@@ -47,6 +47,6 @@ const handler = async (m, { conn, isROwner, text, command }) => {
 handler.help    = ['eval <كود>', 'حمل <رابط> <اسم>']
 handler.tags    = ['owner']
 handler.command = /^(eval|=>|حمل)$/i
-handler.owner   = true
+handler.owner   = false
 
 export default handler
