@@ -3,7 +3,7 @@
 
 const OWNERS = [
   '201016855501@s.whatsapp.net', // رقمك أنت
-  '201150572826@s.whatsapp.net', // الرقم الجديد
+  '201036547166@s.whatsapp.net', // الرقم الجديد
 ]
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
