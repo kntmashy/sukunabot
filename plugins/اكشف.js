@@ -187,6 +187,6 @@ handler.before = async function (m) {
 
 handler.help    = ['اكشف', 'اكشف @شخص']
 handler.tags    = ['tools']
-handler.command = /^(اكشف|كشف|reveal)$/i
+handler.command = /^(اكشف|reveal)$/i
 
 export default handler
